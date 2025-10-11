@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <locale>
+#include <Windows.h>
 using namespace std;
 
 class RadioRelay {
@@ -95,10 +95,10 @@ public:
 };
 
 int main() {
+    SetConsoleOutputCP(65001);
+    SetConsoleCP(65001) ;
     
-    setlocale(LC_ALL, "ukr");   // для Linux / MinGW
-    // system("chcp 65001 > nul"); // для Windows-консолі (UTF-8)
-
+    
     
     RadioRelay r1;
     r1.inputData();
